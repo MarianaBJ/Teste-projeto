@@ -31,13 +31,3 @@ export default function RootLayout({ children }) {
   );
 }
 
-/*
-export function RootLayout({ children }) {
-  return (
-    <>
-      {children}
-      <Toaster />
-    </>
-  )
-}
-  */

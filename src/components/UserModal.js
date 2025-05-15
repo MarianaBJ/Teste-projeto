@@ -60,7 +60,7 @@ export function UserModal() {
             <Sheet open={open} onOpenChange={setOpen}>
                 <SheetContent
                     side="right"
-                    className="w-[60vw] max-w-[90vw] min-w-[34vw] !max-w-[90vw] z-50 shadow-lg flex flex-col [&>button:first-of-type]:hidden"
+                    className="w-[40vw] max-w-[90vw] min-w-[34vw] !max-w-[90vw] z-50 shadow-lg flex flex-col [&>button:first-of-type]:hidden"
                 >
                     <div className="h-full p-6 overflow-y-auto">
                         <div className="flex items-center justify-between mb-8 w-full">
@@ -71,6 +71,7 @@ export function UserModal() {
                                 variant="ghost"
                                 size="icon"
                                 className="rounded-full border border-gray-300"
+                                onClick={() => setOpen(false)}
                             >
                                 <X className="h-4 w-4" />
                             </Button>
@@ -118,7 +119,7 @@ export function UserModal() {
                             <div className="flex flex-wrap items-center justify-between p-2 border rounded-md bg-gray-100 w-full">
                                 <div>
                                     <Label className="mb-2">Status</Label>
-                                    <span className="text-sm font-extralight whitespace-nowrap">
+                                    <span className="text-sm font-extralight">
                                         Defina se o usuário estará ativo ao ser adicionado.
                                     </span>
                                 </div>

@@ -48,6 +48,7 @@ html {
   --radius-md: calc(var(--radius) - 2px);
   --radius-lg: var(--radius);
   --radius-xl: calc(var(--radius) + 4px);
+  --font-geist-sans: var(--font-geist-sans), -apple-system, BlinkMacSystemFont, Roboto, Helvetica, Arial, sans-serif;
 }
 
 :root {
@@ -121,7 +122,8 @@ html {
 
 @layer base {
   * {
-    @apply border-border outline-ring/50;
+    border-color: var(--color-border);
+    outline-color: oklch(0.708 0 0 / 50%);
   }
 
   body {

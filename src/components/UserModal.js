@@ -4,7 +4,6 @@ import { useState } from "react"
 import {
     Sheet,
     SheetContent,
-    SheetFooter,
 } from "@/components/ui/sheet"
 import { Button } from "@/components/ui/button"
 import { Input } from "@/components/ui/input"
@@ -56,15 +55,15 @@ export function UserModal() {
 
     return (
         <>
-            <Button onClick={() => setOpen(true)}><Plus /> Adicionar usuário</Button>
+            <Button onClick={() => setOpen(true)} className="cursor-pointer rounded-2xl"><Plus /> Adicionar</Button>
 
             <Sheet open={open} onOpenChange={setOpen}>
                 <SheetContent
                     side="right"
-                    className="[&>button:first-of-type]:hidden max-w-[80vw] min-w-[34vw] z-50 shadow-lg flex flex-col"
+                    className="w-[60vw] max-w-[90vw] min-w-[34vw] !max-w-[90vw] z-50 shadow-lg flex flex-col [&>button:first-of-type]:hidden"
                 >
                     <div className="h-full p-6 overflow-y-auto">
-                        <div className="flex items-center justify-between mb-4 w-full">
+                        <div className="flex items-center justify-between mb-8 w-full">
                             <h1 className="font-serif text-2xl">Adicionar usuário</h1>
 
 
@@ -132,12 +131,12 @@ export function UserModal() {
                                 </div>
                             </div>
 
-                            <SheetFooter className="flex justify-between mt-4">
+                            <div className="flex justify-end mt-4 gap-4">
 
-                                <Button type="button" variant="outline">Cancelar</Button>
+                                <Button type="button" variant="outline" className="w-24 rounded-2xl">Cancelar</Button>
 
-                                <Button type="submit">Adicionar</Button>
-                            </SheetFooter>
+                                <Button type="submit" className="w-24 rounded-2xl">Adicionar</Button>
+                            </div>
                         </form>
                     </div>
                 </SheetContent>

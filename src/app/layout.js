@@ -4,12 +4,12 @@ import { Toaster } from "@/components/ui/sonner"
 
 
 const geistSans = Geist({
-  variable: "--font-geist-sans",
+  variable: "--geist-font, -apple-system, BlinkMacSystemFont, Roboto, Helvetica, Arial, sans-serif",
   subsets: ["latin"],
 });
 
 const geistMono = Geist_Mono({
-  variable: "--font-geist-mono",
+  variable: "--geist-font, -apple-system, BlinkMacSystemFont, Roboto, Helvetica, Arial, sans-serif",
   subsets: ["latin"],
 });
 
